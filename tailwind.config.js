@@ -13,6 +13,7 @@ module.exports = {
 			colors: {
 				main: "#023047",
 				background: "#8ecae6",
+				logo: "#ffb703",
 			},
 		},
 	},
