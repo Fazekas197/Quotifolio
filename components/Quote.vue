@@ -24,6 +24,7 @@
 				src="/img/arrows-rotate-solid.svg"
 				alt="refresh"
 				class="w-12 cursor-pointer"
+				@click="$emit('refresh')"
 			/>
 		</div>
 	</div>
