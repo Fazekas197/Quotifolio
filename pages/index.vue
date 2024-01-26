@@ -1,5 +1,1 @@
-<template>
-	<div>
-		<h1 class="text-4xl">Home Page</h1>
-	</div>
-</template>
+<template></template>
