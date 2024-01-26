@@ -1,5 +1,5 @@
 <template>
-	<div class="w-dvw h-dvh bg-[#49a6ff]">
+	<div class="w-dvw h-dvh bg-background">
 		<NuxtPage />
 	</div>
 </template>

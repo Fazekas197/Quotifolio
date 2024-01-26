@@ -9,7 +9,12 @@ module.exports = {
 		"./error.vue",
 	],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				main: "#023047",
+				background: "#8ecae6",
+			},
+		},
 	},
 	plugins: [],
 };
