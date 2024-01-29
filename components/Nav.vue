@@ -1,5 +1,5 @@
 <template>
-	<div class="flex items-center w-full justify-between px-2">
+	<div class="flex items-center w-full justify-between px-2 mt-5">
 		<NuxtLink to="/" class="text-4xl text-logo">Quotofolio</NuxtLink>
 		<!-- LINKS -->
 		<div class="text-main text-lg">

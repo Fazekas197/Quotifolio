@@ -1,5 +1,10 @@
 <template>
-	<Quote :quote="quote.q" :autor="quote.a" @refresh="getQuote()" />
+	<Quote
+		:quote="quote.q"
+		:autor="quote.a"
+		@refresh="getQuote()"
+		class="m-auto"
+	/>
 </template>
 
 <script setup>

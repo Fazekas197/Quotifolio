@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-white w-3/4 min-h-96 rounded-2xl">
+	<div class="bg-white w-3/4 min-h-96 rounded-2xl m-auto">
 		<h1 class="text-center text-4xl text-main my-5">Log In</h1>
 		<form @submit.prevent="" class="m-5 floa">
 			<input
