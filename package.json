@@ -16,5 +16,8 @@
     "tailwindcss": "^3.4.1",
     "vue": "^3.4.14",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "nuxt-mongoose": "^1.0.4"
   }
 }
