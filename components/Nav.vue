@@ -1,10 +1,14 @@
 <template>
 	<div>
-		<div v-if="isLogged">
-			<button>Sign In</button>
-			<button>Sign Up</button>
+		<h1 class="text-4xl text-logo">Quotofolio</h1>
+		<!-- LINKS -->
+		<div>
+			<div v-if="!isLogged">
+				<button>Sign In</button>
+				<button>Sign Up</button>
+			</div>
+			<button v-else>Log Out</button>
 		</div>
-		<button v-else>Log Out</button>
 	</div>
 </template>
 
