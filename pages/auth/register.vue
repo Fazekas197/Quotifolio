@@ -1,7 +1,7 @@
 <template>
 	<div class="bg-white w-3/4 min-h-96 rounded-2xl m-auto">
 		<h1 class="text-center text-4xl text-main my-5">Register</h1>
-		<form @submit="handleRegister" class="m-5 floa">
+		<form @submit.prevent="handleRegister" class="m-5 floa">
 			<input
 				v-model="form.email"
 				type="email"
@@ -37,12 +37,15 @@
 </template>
 
 <script setup>
+	import { useRoute, useRouter } from "vue-router";
+
 	const form = ref({
 		email: "",
 		username: "",
 		password: "",
 	});
 	const confirmPass = ref("");
+	const router = useRouter();
 
 	async function handleRegister() {
 		try {
@@ -55,6 +58,8 @@
 				// handle unmathching pass
 				console.alert("The password and confirm password don't match");
 			}
+
+			router.push({ path: "/" });
 		} catch (error) {
 			// handle error
 			console.log(error);
