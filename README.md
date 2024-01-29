@@ -20,5 +20,5 @@ An app which gives you random quotes and let's you store your favorite quotes
 -   [x] req 2
 -   [x] req 3
 -   [x] req 4
--   [ ] req 5
+-   [x] req 5
 -   [ ] req 6

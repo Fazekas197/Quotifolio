@@ -1,13 +1,15 @@
 <template>
 	<div class="bg-white w-3/4 min-h-96 rounded-2xl m-auto">
 		<h1 class="text-center text-4xl text-main my-5">Log In</h1>
-		<form @submit.prevent="" class="m-5 floa">
+		<form @submit.prevent="handleLogin()" class="m-5 floa">
 			<input
+				v-model="form.email"
 				type="email"
 				placeholder="Email"
 				class="bg-main opacity-80 w-full text-white text-lg p-2 rounded-xl"
 			/>
 			<input
+				v-model="form.password"
 				type="password"
 				placeholder="Password"
 				class="bg-main opacity-80 w-full text-white text-lg p-2 rounded-xl my-5"
@@ -18,3 +20,23 @@
 		</form>
 	</div>
 </template>
+
+<script setup>
+	import { useRouter } from "vue-router";
+	const router = useRouter();
+
+	const form = ref({
+		email: "",
+		password: "",
+	});
+
+	const { signIn } = useAuth();
+	async function handleLogin() {
+		try {
+			await signIn("credentials", form.value);
+			router.push({ path: "/" });
+		} catch (error) {
+			console.log(error);
+		}
+	}
+</script>

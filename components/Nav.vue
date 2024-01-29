@@ -11,11 +11,20 @@
 					>Sign Up</NuxtLink
 				>
 			</div>
-			<button v-else>Log Out</button>
+			<button v-else @click="handleLogout()">Log Out</button>
 		</div>
 	</div>
 </template>
 
 <script setup>
-	const isLogged = false;
+	const { status } = useAuth();
+	const isLogged = computed(() => {
+		if (status.value === "authenticated") return true;
+		else return false;
+	});
+
+	const { signOut } = useAuth();
+	async function handleLogout() {
+		await signOut();
+	}
 </script>
