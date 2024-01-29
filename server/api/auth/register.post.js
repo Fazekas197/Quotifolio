@@ -16,5 +16,5 @@ export default defineEventHandler(async (event) => {
 
 	const user = await User.create({ ...body, password: hashedPass });
 
-	return { ...user, password: undefined };
+	return { ...user.toObject(), password: undefined };
 });
