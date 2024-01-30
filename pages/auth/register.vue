@@ -37,7 +37,7 @@
 </template>
 
 <script setup>
-	import { useRoute, useRouter } from "vue-router";
+	import { useRouter } from "vue-router";
 
 	const form = ref({
 		email: "",
@@ -58,8 +58,7 @@
 				// handle unmathching pass
 				console.alert("The password and confirm password don't match");
 			}
-
-			router.push({ path: "/" });
+			router.push({ path: "/auth/login" });
 		} catch (error) {
 			// handle error
 			console.log(error);

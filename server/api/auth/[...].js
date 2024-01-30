@@ -32,7 +32,7 @@ export default NuxtAuthHandler({
 					});
 				}
 
-				return { ...user.toObject, password: undefined };
+				return { ...user.toObject(), password: undefined };
 			},
 		}),
 	],
