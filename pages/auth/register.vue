@@ -1,7 +1,7 @@
 <template>
 	<div class="bg-white w-3/4 min-h-96 rounded-2xl m-auto">
 		<h1 class="text-center text-4xl text-main my-5">Register</h1>
-		<form @submit.prevent="handleRegister" class="m-5 floa">
+		<form @submit.prevent="handleRegister" class="mx-5 floa">
 			<input
 				v-model="form.email"
 				type="email"
@@ -33,6 +33,12 @@
 				Confirm
 			</button>
 		</form>
+		<div class="flex text-main text-lg justify-center flex-wrap">
+			<p class="mx-1">Already have an account?</p>
+			<NuxtLink to="/auth/login" class="italic underline"
+				>Log in</NuxtLink
+			>
+		</div>
 	</div>
 </template>
 

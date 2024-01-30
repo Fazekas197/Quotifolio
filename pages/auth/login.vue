@@ -21,6 +21,12 @@
 				Log In
 			</button>
 		</form>
+		<div class="flex text-main text-lg justify-center flex-wrap">
+			<p class="mx-1">You don't have an account?</p>
+			<NuxtLink to="/auth/register" class="italic underline"
+				>Sign Up</NuxtLink
+			>
+		</div>
 	</div>
 </template>
 
