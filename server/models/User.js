@@ -18,4 +18,10 @@ export const User = defineMongooseModel("User", {
 		required: true,
 		length: 8,
 	},
+	quotes: [
+		{
+			quote: { type: string },
+			author: { type: string },
+		},
+	],
 });
