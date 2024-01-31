@@ -2,10 +2,10 @@
 	<div class="m-auto">
 		<Quote
 			:quote="quotes[index].quote"
-			:autor="quotes[index].quote"
+			:autor="quotes[index].author"
 			class="m-auto"
 		/>
-		<div>
+		<div class="text-center">
 			<button
 				class="bg-main text-white py-2 px-4 rounded-full"
 				@click="prev"
@@ -30,10 +30,8 @@
 	const index = ref(0);
 	function next() {
 		if (quotes.length - 1 > index.value) index.value++;
-		console.log(index.value);
 	}
 	function prev() {
 		if (0 < index.value) index.value--;
-		console.log(index.value);
 	}
 </script>

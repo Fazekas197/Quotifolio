@@ -39,5 +39,9 @@
 			method: "POST",
 			body: { ...form.value, id: data.value.user._id },
 		});
+		form.value = {
+			quote: "",
+			author: "",
+		};
 	}
 </script>
