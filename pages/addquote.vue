@@ -39,9 +39,9 @@
 	});
 
 	async function addQuote() {
-		await useFetch("/api/addQuote", {
+		await useFetch(`/api/${data.value.user._id}/addQuote`, {
 			method: "POST",
-			body: { ...form.value, id: data.value.user._id },
+			body: form.value,
 		});
 		form.value = {
 			quote: "",
