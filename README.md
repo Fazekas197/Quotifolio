@@ -13,6 +13,8 @@ An app which gives you random quotes and let's you store your favorite quotes
     - implement DB to store information about users
 6. Let users add their own quotes
     - store the quotes in the DB
+7. Display Quotes
+8. Delete selected quote
 
 ## TO-DO
 
@@ -21,4 +23,6 @@ An app which gives you random quotes and let's you store your favorite quotes
 -   [x] req 3
 -   [x] req 4
 -   [x] req 5
--   [ ] req 6
+-   [x] req 6
+-   [x] req 7
+-   [ ] req 8
