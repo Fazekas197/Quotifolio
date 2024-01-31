@@ -27,6 +27,10 @@
 </template>
 
 <script setup>
+	definePageMeta({
+		middleware: "auth",
+	});
+
 	const { data } = useAuth();
 
 	const form = ref({

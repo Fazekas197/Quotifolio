@@ -23,6 +23,10 @@
 </template>
 
 <script setup>
+	definePageMeta({
+		middleware: "auth",
+	});
+
 	const { data } = useAuth();
 	const res = await useFetch(`/api/${data.value.user._id}/getQuotes`);
 	const quotes = res.data._value;
