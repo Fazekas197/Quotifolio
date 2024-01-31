@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="bg-white w-3/4 min-h-96 rounded-2xl flex flex-col justify-between p-2"
+		class="bg-white max-w-80 min-w-80 min-h-96 rounded-2xl flex flex-col justify-between p-2"
 	>
 		<img src="/img/quote-left-solid.svg" alt="quote icon" class="w-16" />
 
