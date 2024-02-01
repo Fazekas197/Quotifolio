@@ -6,9 +6,9 @@
 				:autor="quotes[index].author"
 				class="m-auto"
 			/>
-			<div class="text-center">
+			<div class="flex justify-between">
 				<button
-					class="bg-main text-white py-2 px-4 rounded-full"
+					class="bg-main text-white py-2 px-4 rounded-full mx-4"
 					@click="prev"
 				>
 					previous
