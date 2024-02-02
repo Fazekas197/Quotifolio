@@ -31,15 +31,13 @@
 		middleware: "auth",
 	});
 
-	const { data } = useAuth();
-
 	const form = ref({
 		quote: "",
 		author: "",
 	});
 
 	async function addQuote() {
-		await useFetch(`/api/${data.value.user._id}`, {
+		await useFetch(`/api/`, {
 			method: "PUT",
 			body: form.value,
 		});
