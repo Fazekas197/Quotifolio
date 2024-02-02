@@ -26,3 +26,15 @@ An app which gives you random quotes and let's you store your favorite quotes
 -   [x] req 6
 -   [x] req 7
 -   [ ] req 8
+
+---
+
+---
+
+## .env Exemple
+
+```
+MONGODB_URI=mongodb://localhost:27017/quotofolio
+NEXTAUTH_URL=http://localhost:3000
+AUTH_SECRET=dsadsadwasdafadasfo
+```
