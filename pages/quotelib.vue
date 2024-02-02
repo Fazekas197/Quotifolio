@@ -38,7 +38,7 @@
 	});
 
 	const { data } = useAuth();
-	const res = await useFetch(`/api/${data.value.user._id}/getQuotes`);
+	const res = await useFetch(`/api/${data.value.user._id}`);
 	const quotes = res.data._value;
 
 	const index = ref(0);
