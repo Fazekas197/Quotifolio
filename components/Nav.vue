@@ -5,11 +5,9 @@
 		<div class="text-main text-lg my-2">
 			<div v-if="!isLogged">
 				<NuxtLink to="/auth/login" class="mx-2">Sign In</NuxtLink>
-				<NuxtLink
-					to="/auth/register"
-					class="bg-main text-white py-2 px-4 rounded-full"
-					>Sign Up</NuxtLink
-				>
+				<NuxtLink to="/auth/register">
+					<Btn text="Sign Up" />
+				</NuxtLink>
 			</div>
 			<div v-else>
 				<NuxtLink to="/addquote" class="mr-2">Add Quote</NuxtLink>

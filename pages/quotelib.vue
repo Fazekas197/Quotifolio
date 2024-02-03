@@ -7,27 +7,15 @@
 				class="m-auto"
 			/>
 			<div class="flex justify-between">
-				<button
-					class="bg-main text-white py-2 px-4 rounded-full mx-4"
-					@click="prev"
-				>
-					previous
-				</button>
-				<button
-					class="bg-main text-white py-2 px-4 rounded-full mx-4"
-					@click="next"
-				>
-					next
-				</button>
+				<Btn text="previous" @click="prev" />
+				<Btn text="next" @click="next" />
 			</div>
 		</div>
 		<div v-else class="text-2xl text-main text-center">
 			<p>There are no quotes</p>
-			<NuxtLink
-				to="/addquote"
-				class="bg-main text-white py-2 rounded-full block m-2"
-				>Add one?</NuxtLink
-			>
+			<NuxtLink to="/addquote">
+				<Btn text="Add one?" />
+			</NuxtLink>
 		</div>
 	</div>
 </template>

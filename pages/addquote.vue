@@ -15,13 +15,7 @@
 				placeholder="Author"
 				class="bg-main opacity-80 w-full text-white text-lg p-2 rounded-xl my-2"
 			/>
-			<button
-				type="submit"
-				@click="addQuote"
-				class="bg-main text-white py-2 px-4 rounded-full text-lg"
-			>
-				Add
-			</button>
+			<Btn text="Add" @click="addQuote" />
 		</form>
 	</div>
 </template>
