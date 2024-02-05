@@ -5,7 +5,14 @@
 				:quote="quotes[index].quote"
 				:autor="quotes[index].author"
 				class="m-auto"
-			/>
+			>
+				<img
+					src="/img/trash-solid.svg"
+					alt="delete"
+					class="w-12 cursor-pointer"
+					@click="deleteQuote()"
+				/>
+			</Quote>
 			<div class="flex justify-between">
 				<Btn text="previous" @click="prev" />
 				<Btn text="next" @click="next" />
@@ -25,9 +32,11 @@
 		middleware: "auth",
 	});
 
+	// get quotes
 	const res = await useFetch(`/api/`);
 	const quotes = res.data._value;
 
+	// navigate thru quotes
 	const index = ref(0);
 	function next() {
 		if (quotes.length - 1 > index.value) index.value++;
