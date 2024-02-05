@@ -12,6 +12,13 @@
 					class="w-12 cursor-pointer"
 					@click="deleteQuote()"
 				/>
+				<NuxtLink :to="'/' + quotes[index]._id" class="ml-5">
+					<img
+						src="/img/pen-to-square-solid.svg"
+						alt="delete"
+						class="w-12 cursor-pointer"
+					/>
+				</NuxtLink>
 			</Quote>
 			<div class="flex justify-between">
 				<Btn text="previous" @click="prev" />
