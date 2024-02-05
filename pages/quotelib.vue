@@ -34,14 +34,26 @@
 
 	// get quotes
 	const res = await useFetch(`/api/`);
-	const quotes = res.data._value;
+	const quotes = ref(res.data._value);
 
 	// navigate thru quotes
 	const index = ref(0);
 	function next() {
-		if (quotes.length - 1 > index.value) index.value++;
+		if (quotes.value.length - 1 > index.value) index.value++;
 	}
 	function prev() {
 		if (0 < index.value) index.value--;
+	}
+
+	// delete quotes
+	async function deleteQuote() {
+		const id = quotes.value[index.value]._id;
+		await useFetch(`/api/${id}`, {
+			method: "DELETE",
+		});
+
+		// // get new quotes
+		const res = await useFetch(`/api/`);
+		quotes.value = res.data._value;
 	}
 </script>
