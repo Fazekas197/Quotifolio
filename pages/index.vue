@@ -1,10 +1,12 @@
 <template>
-	<Quote
-		:quote="quote.q"
-		:autor="quote.a"
-		@refresh="getQuote()"
-		class="m-auto"
-	/>
+	<Quote :quote="quote.q" :autor="quote.a" class="m-auto">
+		<img
+			src="/img/arrows-rotate-solid.svg"
+			alt="refresh"
+			class="w-12 cursor-pointer"
+			@click="getQuote()"
+		/>
+	</Quote>
 </template>
 
 <script setup>
