@@ -15,6 +15,7 @@ An app which gives you random quotes and let's you store your favorite quotes
     - store the quotes in the DB
 7. Display Quotes
 8. Delete selected quote
+9. Update quote
 
 ## TO-DO
 
@@ -25,7 +26,8 @@ An app which gives you random quotes and let's you store your favorite quotes
 -   [x] req 5
 -   [x] req 6
 -   [x] req 7
--   [ ] req 8
+-   [x] req 8
+-   [x] req 9
 
 ---
 
