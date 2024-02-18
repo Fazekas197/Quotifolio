@@ -1,6 +1,6 @@
 # Quotifolio
 
-An app which gives you random quotes and let's you store your favorite quotes
+An app which gives you an random quotes and let's you store your favorite quotes
 
 ## Functional requirements
 
