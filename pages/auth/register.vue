@@ -3,24 +3,28 @@
 		<h1 class="text-center text-4xl text-main my-5">Register</h1>
 		<form @submit.prevent="handleRegister" class="mx-5 floa">
 			<input
+				required
 				v-model="form.email"
 				type="email"
 				placeholder="Email"
 				class="bg-main opacity-80 w-full text-white text-lg p-2 rounded-xl"
 			/>
 			<input
+				required
 				v-model="form.username"
 				type="text"
 				placeholder="Username"
 				class="bg-main opacity-80 w-full text-white text-lg p-2 rounded-xl mt-3"
 			/>
 			<input
+				required
 				v-model="form.password"
 				type="password"
 				placeholder="Password"
 				class="bg-main opacity-80 w-full text-white text-lg p-2 rounded-xl mt-3"
 			/>
 			<input
+				required
 				v-model="confirmPass"
 				type="password"
 				placeholder="Confirm Password"
@@ -55,7 +59,12 @@
 
 	async function handleRegister() {
 		try {
-			if (confirmPass.value === form.value.password) {
+			if (
+				form.value.email &&
+				form.value.username &&
+				form.value.password &&
+				confirmPass.value === form.value.password
+			) {
 				await useFetch("/api/auth/register", {
 					method: "POST",
 					body: form.value,

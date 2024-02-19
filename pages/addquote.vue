@@ -8,12 +8,14 @@
 				rows="3"
 				placeholder="Quote"
 				class="bg-main opacity-80 w-full text-white text-lg p-2 rounded-xl"
+				required
 			/>
 			<input
 				v-model="form.author"
 				type="text"
 				placeholder="Author"
 				class="bg-main opacity-80 w-full text-white text-lg p-2 rounded-xl my-2"
+				required
 			/>
 			<Btn text="Add" @click="addQuote" />
 		</form>
@@ -31,13 +33,15 @@
 	});
 
 	async function addQuote() {
-		await useFetch(`/api/`, {
-			method: "PUT",
-			body: form.value,
-		});
-		form.value = {
-			quote: "",
-			author: "",
-		};
+		if (form.value.quote && form.value.author) {
+			await useFetch(`/api/`, {
+				method: "PUT",
+				body: form.value,
+			});
+			form.value = {
+				quote: "",
+				author: "",
+			};
+		}
 	}
 </script>
